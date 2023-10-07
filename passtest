@@ -1,2 +1,5 @@
 import random
+
 passlen = int(input("Entrer la longueur du mot de passe : "))
+
+s = "abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ#$&"
