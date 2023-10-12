@@ -8,3 +8,7 @@ p = "".join(random.sample(s,passlen ))
 print(p)
 
 passlen = int(input("Entrer la longueur du mot de passe : "))
+
+print("MDP incorrect")
+
+if:
