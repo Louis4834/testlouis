@@ -36,6 +36,9 @@ print(p)
 if plateau[p] != plateau[1] :
         print("Faux")
 
+else :
+        print("vraie")
+
 
 
 
