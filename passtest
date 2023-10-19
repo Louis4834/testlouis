@@ -38,6 +38,8 @@ if plateau[p] != plateau[1] :
 
 else :
         print("vraie")
+try :
+        plateau[4] = "bisous"
 
 
 
