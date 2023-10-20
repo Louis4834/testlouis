@@ -5,7 +5,8 @@ passlen = int(input("Entrer la longueur du mot de passe : "))
 s = "abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ#$&"
 p = "".join(random.sample(s,passlen ))
 
-print(p)
+if(passlen):
+        print(p)
 
 passlen = int(input("Entrer la longueur du mot de passe : "))
 
@@ -21,15 +22,6 @@ if plateau[0] == plateau[1] == plateau[2] != " " \
         or plateau[2] == plateau[4] == plateau[6] != " ":
 
 s = 4/1000
-
-if plateau[p] != plateau[1] != plateau[2] != " " \
-        or plateau[3] == plateau[4] == plateau[5] != " " \
-        or plateau[6] == plateau[7] == plateau[8] != " " \
-        or plateau[0] == plateau[3] == plateau[6] != " " \
-        or plateau[1] == plateau[4] == plateau[7] != " " \
-        or plateau[2] == plateau[5] == plateau[8] != " " \
-        or plateau[0] == plateau[4] == plateau[8] != " " \
-        or plateau[2] == plateau[4] == plateau[6] != " ":
 
 print(p)
 
