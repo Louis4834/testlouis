@@ -32,6 +32,8 @@ else :
         print("vraie")
 try :
         plateau[4] = "bisous"
+        plateau[3] = "amour"
+
 
 
 
