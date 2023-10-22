@@ -33,6 +33,9 @@ else :
 try :
         plateau[4] = "bisous"
         plateau[3] = "amour"
+        plateau[2] = "haine"
+        plateau[1] = "chien"
+
 
 
 
