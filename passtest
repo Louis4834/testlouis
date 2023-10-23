@@ -31,7 +31,8 @@ if plateau[p] != plateau[1] :
 else :
         print("vraie")
 try :
-        plateau[4] = "bisous"
+        plateau[5] = "chat"
+        plateau[4] = "maison"
         plateau[3] = "amour"
         plateau[2] = "haine"
         plateau[1] = "chien"
