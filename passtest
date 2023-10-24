@@ -21,8 +21,6 @@ if plateau[0] == plateau[1] == plateau[2] != " " \
         or plateau[0] == plateau[4] == plateau[8] != " " \
         or plateau[2] == plateau[4] == plateau[6] != " ":
 
-s = 4/1000
-
 print(p)
 
 if plateau[p] != plateau[1] :
@@ -31,6 +29,7 @@ if plateau[p] != plateau[1] :
 else :
         print("vraie")
 try :
+        plateau[6] = "elephant"
         plateau[5] = "chat"
         plateau[4] = "maison"
         plateau[3] = "amour"
