@@ -36,6 +36,9 @@ try :
         plateau[2] = "haine"
         plateau[1] = "chien"
 
+print(s)
+print(passlen)
+
 
 
 
