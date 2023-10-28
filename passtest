@@ -1,4 +1,6 @@
 import random
+import pandas
+import time
 
 passlen = int(input("Entrer la longueur du mot de passe : "))
 
@@ -36,8 +38,6 @@ try :
         plateau[2] = "haine"
         plateau[1] = "chien"
 
-print(s)
-print(passlen)
 
 
 
