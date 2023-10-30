@@ -28,18 +28,11 @@ if plateau[p] != plateau[1] :
 
 else :
         print("vraie")
-try :
-        plateau[8] = "esport"
-        plateau[7] = "sport"
-        plateau[6] = "elephant"
-        plateau[5] = "chat"
-        plateau[4] = "maison"
-        plateau[3] = "amour"
-        plateau[2] = "haine"
-        plateau[1] = "chien"
 
 bot_in_action = True
 was_in_position = False
+
+takeprofit_level = 5
 
 
 
