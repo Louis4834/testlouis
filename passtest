@@ -12,7 +12,7 @@ if(passlen):
 
 passlen = int(input("Entrer la longueur du mot de passe : "))
 
-print("MDP incorrect")
+print("MDP incorrect ou correct don't know")
 
 if plateau[0] == plateau[1] == plateau[2] != " " \
         or plateau[3] == plateau[4] == plateau[5] != " " \
@@ -30,9 +30,9 @@ else :
         print("vraie")
 
 bot_in_action = True
-was_in_position = False
+was_in_position = True
 
-takeprofit_level = 5
+takeprofit_level = 50
 
 
 
