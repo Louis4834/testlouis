@@ -4,7 +4,7 @@ import time
 
 passlen = int(input("Entrer la longueur du mot de passe : "))
 
-s = "abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ#$&"
+s = "abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYTZ#$&"
 p = "".join(random.sample(s,passlen ))
 
 if(passlen):
@@ -30,7 +30,8 @@ else :
         print("vraie")
 
 bot_in_action = True
-was_in_position = True
+was_in_position = False
+startup_info = False
 
 takeprofit_level = 50
 
