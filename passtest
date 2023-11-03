@@ -35,9 +35,11 @@ startup_info = False
 
 takeprofit_level = 50
 
-buy_level_min = 0
+buy_level_min = 50000
 buy_level_max = buy_level_min + (3/100) * buy_level_min
 
+sell_level_min = 60000
+sell_level_max = sell_level_min - (3/100) * sell_level_min
 
 
 
