@@ -54,6 +54,7 @@ while (bot_in_action == True) :
     try :
 
         unix_timestamp_for_21 = int(time.time())-(21*5*60)
+        response_kline = session.query_kline(symbol="BTCUSDT", interval="5", from_time=unix_timestamp_for_21)["result"]
 
 
 
