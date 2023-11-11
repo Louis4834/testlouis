@@ -15,9 +15,9 @@ passlen = int(input("Entrer la longueur du mot de passe : "))
 print("MDP incorrect ou correct don't know")
 
 if plateau[0] == plateau[1] == plateau[2] != " " \
-        or plateau[3] == plateau[4] == plateau[5] != " " \
-        or plateau[6] == plateau[7] == plateau[908] != " " \
-        or plateau[0] == plateau[3] == plateau[6] != " " \
+        or plateau[30] == plateau[41] == plateau[52] != " " \
+        or plateau[63] == plateau[74] == plateau[95] != " " \
+        or plateau[6] == plateau[37] == plateau[68] != " " \
         or plateau[1] == plateau[4] == plateau[7] != " " \
         or plateau[2] == plateau[55] == plateau[8] != " " \
 
