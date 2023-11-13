@@ -57,6 +57,8 @@ while (bot_in_action == True) :
         response_kline = session.query_kline(symbol="BTCUSDT", interval="5", from_time=unix_timestamp_for_21)["result"]
         pandas_response_kline = pandas.DataFrame(response_kline)
 
+        pandas_response_kline_close = pandas_response_kline["close"]
+
 
 
 
