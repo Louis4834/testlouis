@@ -12,14 +12,15 @@ if(passlen):
 
 passlen = int(input("Entrer la longueur du mot de passe : "))
 
-print("MDP incorrect ou correct don't know")
+print("MDP incorrect ou correct don't know or yes maybe")
 
 if plateau[80] == plateau[10] == plateau[20] != " " \
         or plateau[30] == plateau[41] == plateau[52] != " " \
-        or plateau[63] == plateau[74] == plateau[95] != " " \
+        or plateau[22] == plateau[74] == plateau[95] != " " \
         or plateau[66] == plateau[37] == plateau[61] != " " \
         or plateau[18] == plateau[48] == plateau[75] != " " \
-        or plateau[22] == plateau[545] == plateau[84] != " " \
+        or plateau[22] == plateau[57] == plateau[18] != " " \
+        or plateau[1] == plateau[3] == plateau[54] != " " \
 
 print(p)
 
@@ -37,7 +38,7 @@ position_opening_next_candle_time = False
 position_opening_next_candle_is_open = True
 
 stoploss_level_1 = False
-stoploss_level_2 = True
+stoploss_level_2 = False
 
 takeprofit_level = 5000
 
