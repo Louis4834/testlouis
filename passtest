@@ -34,19 +34,19 @@ bot_in_action = True
 was_in_position = True
 startup_info = False
 
-position_opening_next_candle_time = False
+position_opening_next_candle_time = True
 position_opening_next_candle_is_open = True
 
 stoploss_level_1 = False
 stoploss_level_2 = False
 
-takeprofit_level = 5000
+takeprofit_level = 50000
 
-buy_level_min = 47598
-buy_level_max = buy_level_min + (3.21/100) * buy_level_min
+buy_level_min = 46897
+buy_level_max = buy_level_min + (3.58/100) * buy_level_min
 
-sell_level_min = 62479
-sell_level_max = sell_level_min - (3.67/100) * sell_level_min
+sell_level_min = 68225
+sell_level_max = sell_level_min - (3.87/100) * sell_level_min
 
 print(f"\nDémarrage du robot BTC ({time.strftime('%X')})\n")
 
