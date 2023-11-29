@@ -81,3 +81,11 @@ while (bot_in_action == True) :
 
         #Check if there are positions and orders
 
+        response_position = session.my_position(symbol="BTCUSDT")["result"][0]
+        response_order = session.query_active_order(symbol="BTCUSDT")["result"]
+        response_conditional_order = session.query_conditional_order(symbol="BTCUSDT")["result"]
+        order_number = len(response_order) + len(response_conditional_order)
+
+        if(startup_info == False) :
+
+            #Display startup information
