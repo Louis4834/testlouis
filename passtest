@@ -88,12 +88,23 @@ while (bot_in_action == True) :
 
         if(startup_info == False) :
 
-            #Display startup information
+                #Display startup information
+        
+                print(f"Risque : {stoploss_value} $")
+                print(f"Effet de levier : {response_position['leverage']}")
+                print(f"Marge isolé : {response_position['is_isolated']}")
+                print(f"Mode (0 = unidirectionnel) : {response_position['position_idx']}\n")
+        
+                print(f"Niveau d'achat minimum : {buy_level_min}")
+                print(f"Niveau de vente minimum : {sell_level_min}\n")
 
-            print(f"Risque : {stoploss_value} $")
-            print(f"Effet de levier : {response_position['leverage']}")
-            print(f"Marge isolé : {response_position['is_isolated']}")
-            print(f"Mode (0 = unidirectionnel) : {response_position['position_idx']}\n")
+                startup_info = True
 
-            print(f"Niveau d'achat minimum : {buy_level_min}")
-            print(f"Niveau de vente minimum : {sell_level_min}\n")
+        if (response_position["size"] == 0) :
+
+            #Management without position
+
+            if (was_in_position == True) :
+
+                print(f"Trade terminé ({time.strftime('%X')})\n")
+                bot_in_action = False
