@@ -118,3 +118,9 @@ while (bot_in_action == True) :
                 
                 print(f"Niveau de vente maximum atteint ({time.strftime('%X')})\n")
                 bot_in_action = False
+
+            elif (order_number != 0 and main_order == False) :
+                
+                session.cancel_all_active_orders(symbol="BTCUSDT")
+                session.cancel_all_conditional_orders(symbol="BTCUSDT")
+                print(f"Ordre inconnu détecté, nettoyage de l'ordre ({time.strftime('%X')})\n")
