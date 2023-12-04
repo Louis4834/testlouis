@@ -124,3 +124,19 @@ while (bot_in_action == True) :
                 session.cancel_all_active_orders(symbol="BTCUSDT")
                 session.cancel_all_conditional_orders(symbol="BTCUSDT")
                 print(f"Ordre inconnu détecté, nettoyage de l'ordre ({time.strftime('%X')})\n")
+
+            elif (order_number == 0 and main_order == False) :
+            
+                if (buy_level_min != 0 and bollinger_down > buy_level_min) : 
+
+                    main_order = session.place_active_order(side="Buy", symbol="BTCUSDT", order_type="Limit", qty=round(position_value/round_bollinger_down,3), price=round_bollinger_down, time_in_force="GoodTillCancel", reduce_only=False, close_on_trigger=False, position_idx=0)["result"]
+                    old_round_bollinger_down = round_bollinger_down
+                    print(f"Ordre d'achat placé ({time.strftime('%X')})\n") 
+
+                elif (sell_level_min != 0 and bollinger_up < sell_level_min) : 
+
+                    main_order = session.place_active_order(side="Sell", symbol="BTCUSDT", order_type="Limit", qty=round(position_value/round_bollinger_up,3), price=round_bollinger_up, time_in_force="GoodTillCancel", reduce_only=False, close_on_trigger=False, position_idx=0)["result"]
+                    old_round_bollinger_up = round_bollinger_up
+                    print(f"Ordre de vente placé ({time.strftime('%X')})\n")   
+
+
