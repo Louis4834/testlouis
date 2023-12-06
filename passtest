@@ -139,4 +139,19 @@ while (bot_in_action == True) :
                     old_round_bollinger_up = round_bollinger_up
                     print(f"Ordre de vente placé ({time.strftime('%X')})\n")   
 
+            elif (order_number != 0 and main_order != False) :  
+
+                if (main_order["side"] == "Buy") :
+
+                    if (buy_level_min != 0 and bollinger_down <= buy_level_min) :
+
+                        session.cancel_active_order(symbol="BTCUSDT", order_id=main_order["order_id"])
+                        print(f"Le niveau d'achat minimum n'est plus respecté, ordre d'achat supprimé ({time.strftime('%X')})\n")   
+                        main_order = False
+
+                    elif (buy_level_min != 0 and bollinger_down > buy_level_min and round_bollinger_down != old_round_bollinger_down) : 
+
+                        session.replace_active_order(order_id=main_order["order_id"], symbol="BTCUSDT", p_r_qty=round(position_value/round_bollinger_down,3), p_r_price=round_bollinger_down, time_in_force="GoodTillCancel", reduce_only=False, close_on_trigger=False, position_idx=0)
+                        old_round_bollinger_down = round_bollinger_down
+
 
