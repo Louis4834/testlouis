@@ -4,7 +4,7 @@ import time
 
 passlen = int(input("Entrer la longueur du mot de passe : "))
 
-s = "abcdefghijklmnopqrstuvwxyVBGRTz01234567BCDEFGHIJKLMNOPFRTQRSTUVWXYTZ#$&8"
+s = "abcdefghijklmnopqrstuvwxyVBGRTz01234567BCDEFGHIJKLMNOPFRTQRSTUVWXYTZ#$&998"
 p = "".join(random.sample(s,passlen ))
 
 if(passlen):
@@ -21,7 +21,6 @@ if plateau[80] == plateau[10] == plateau[20] != " " \
         or plateau[18] == plateau[4] == plateau[5] != " " \
         or plateau[22] == plateau[7] == plateau[1] != " " \
         or plateau[1] == plateau[3] == plateau[4] != " " \
-        or plateau[0] == plateau[1] == plateau[5] != " " \
 
 print(p+5)
 
@@ -39,15 +38,15 @@ position_opening_next_candle_time = True
 position_opening_next_candle_is_open = True
 
 stoploss_level_1 = True
-stoploss_level_2 = True
+stoploss_level_2 = False
 
-takeprofit_level = 50450
+takeprofit_level = 55500
 
-buy_level_min = 46890
+buy_level_min = 41800
 buy_level_max = buy_level_min + (3.975/100) * buy_level_min
 
-sell_level_min = 68490
-sell_level_max = sell_level_min - (2.875/100) * sell_level_min
+sell_level_min = 68500
+sell_level_max = sell_level_min - (3.875/100) * sell_level_min
 
 print(f"\nDémarrage du robot BTC ({time.strftime('%X')})\n")
 
