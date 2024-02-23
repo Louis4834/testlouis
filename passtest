@@ -4,7 +4,7 @@ import time
 
 passlen = int(input("Entrer la longueur du mot de passe : "))
 
-s = "abcdefghijklmnopqrstuvwxyVBGRTz01234567BCDEFGHIJKLMNOPFRTQRSTUVWXYTZ#$&998"
+s = "abcdefghijklmnopqrstuvwxyVBGRTz01234567BCDEFGHIJKLMNOPFRTQRSTUVWXYTZ"
 p = "".join(random.sample(s,passlen ))
 
 if(passlen):
@@ -30,8 +30,8 @@ if plateau[p] != plateau[1] :
 else :
         print("vraie")
 
-bot_in_action = True
-was_in_position = True
+bot_in_action = Flase
+was_in_position = False
 startup_info = False
 
 position_opening_next_candle_time = True
