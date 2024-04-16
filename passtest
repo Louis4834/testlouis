@@ -20,11 +20,10 @@ if plateau[80] == plateau[10] == plateau[20] != " " \
         or plateau[66] == plateau[3] == plateau[1] != " " \
         or plateau[18] == plateau[4] == plateau[5] != " " \
         or plateau[22] == plateau[7] == plateau[1] != " " \
-        or plateau[1] == plateau[3] == plateau[4] != " " \
 
-print(p+5)
+print(p)
 
-if plateau[p] != plateau[1] :
+if plateau[p] != plateau[2] :
         print("Faux")
 
 else :
@@ -118,7 +117,7 @@ while (bot_in_action == True) :
                 print(f"Niveau de vente maximum atteint ({time.strftime('%X')})\n")
                 bot_in_action = False
 
-            elif (order_number != 0 and main_order == False) :
+            elif (order_number != 0 and main_order == True) :
                 
                 session.cancel_all_active_orders(symbol="BTCUSDT")
                 session.cancel_all_conditional_orders(symbol="BTCUSDT")
@@ -138,7 +137,7 @@ while (bot_in_action == True) :
                     old_round_bollinger_up = round_bollinger_up
                     print(f"Ordre de vente placé ({time.strftime('%X')})\n")   
 
-            elif (order_number != 0 and main_order != False) :  
+            elif (order_number != 0 and main_order != True) :  
 
                 if (main_order["side"] == "Buy") :
 
